@@ -13,11 +13,11 @@ public class UserController {
 
     @GetMapping
     public ResponseEntity<List<UserDTO>> getAll() {
-        return ResponseEntity.ok(Arrays.asList(new UserDTO("user", "pass")));
+        return ResponseEntity.ok(Arrays.asList(new UserDTO("username", "email@mail.com", "teste123")));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<UserDTO> getOne(@PathVariable() Long id) {
-        return ResponseEntity.ok(new UserDTO("user", "pass"));
+        return ResponseEntity.ok(new UserDTO("username", "email@mail.com", "teste123"));
     }
 }
